@@ -16,6 +16,7 @@
     position: absolute; /*absolute porque es el hijo*/
     top: 47%;
     left: 20%;
+    animation: infinite plataforma1 2s ease-in-out;
 }
 .moneda1{
     position: absolute;
@@ -39,12 +40,14 @@
     position: absolute; 
     top: 30%;
     left: 51%;
+    animation: infinite plataforma1 5s ease-in-out;
 }
 .corazon{
     position: absolute; 
     top: 19%;
     left: 56%;
     cursor: pointer;
+   
 }
 .hud {
     position: absolute;
@@ -85,3 +88,10 @@
 }
 
 /* Contador monedas y corazones */
+
+
+@keyframes plataforma1 {
+     25% {transform:translateX(-60px);}
+    50%{transform:translateX(0px) ;}
+    75%{transform:translateX(60px);}
+}
