@@ -1,0 +1,266 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.fondo {
+    width: 97%;
+    height: 70vh;
+}
+
+.pantalla {
+    width: 53%;
+    height: 61vh;
+    position: relative;
+    margin: auto;
+}
+
+.zoombie-1 {
+    position: absolute;
+    top: 4%;
+    left: 72%;
+    cursor: pointer;
+    width: 80px;
+}
+
+.zoombie-2 {
+    position: absolute;
+    top: 26%;
+    left: 79%;
+    cursor: pointer;
+    width: 80px;
+}
+
+.zoombie-bailarina {
+    position: absolute;
+    top: 74%;
+    left: 69%;
+    cursor: pointer;
+    width: 104px;
+}
+
+.zoombie-3 {
+    position: absolute;
+    top: 93%;
+    left: 82%;
+    cursor: pointer;
+    width: 80px;
+}
+
+.Girasol {
+    position: absolute;
+    top: 30%;
+    left: 27%;
+    cursor: pointer;
+    width: 100px;
+}
+
+.planta-1 {
+    position: absolute;
+    top: 81%;
+    left: 26%;
+    cursor: pointer;
+    width: 89px;
+}
+
+.planta-2 {
+    position: absolute;
+    top: 12%;
+    left: 28%;
+    cursor: pointer;
+    width: 109px;
+}
+
+.girasol2 {
+    position: absolute;
+    top: 80%;
+    left: 46%;
+    cursor: pointer; 
+    width: 100px;
+}
+
+.girasol3 {
+    position: absolute;
+    top: 95%;
+    left: 34%;
+    cursor: pointer;
+    width: 105px;
+}
+
+.planta12 {
+    position: absolute;
+    top: 97%;
+    left: 58%;
+    cursor: pointer;
+    width: 86px;
+}
+
+.planta-3 {
+    position: absolute;
+    top: 32%;
+    left: 43%;
+    cursor: pointer;
+    width: 109px;
+}
+
+.arveja1 {
+    position: absolute;
+    top: 37%;
+    left: 58%;
+    cursor: pointer;
+    width: 30px;
+    animation: tirar 1s ease-in-out forwards;
+
+}
+
+.arveja2 {
+    position: absolute;
+    top: 32%;
+    left: 54%;
+    cursor: pointer;
+    width: 30px;
+    animation: tirar 1s ease-in-out forwards;
+
+}
+
+.arveja3 {
+    position: absolute;
+    top: 42%;
+    left: 54%;
+    cursor: pointer;
+    width: 30px;
+    animation: tirar 1s ease-in-out forwards;
+
+}
+
+.arveja4 {
+    position: absolute;
+    top: 102%;
+    left: 71%;
+    cursor: pointer;
+    width: 30px;
+    animation: tirar 1s ease-in-out forwards;
+
+}
+
+.arveja5 {
+    position: absolute;
+    top: 13%;
+    left: 41%;
+    cursor: pointer;
+    width: 30px;
+    animation: tirar 1s ease-in-out forwards;
+
+}
+
+.arveja6 {
+    position: absolute;
+    top: 22%;
+    left: 38%;
+    cursor: pointer;
+    width: 30px;
+    animation: tirar 1s ease-in-out forwards;
+
+}
+
+.arveja7 {
+    position: absolute;
+    top: 17%;
+    left: 44%;
+    cursor: pointer;
+    width: 30px;
+    animation: tirar 1s ease-in-out forwards;
+
+}
+
+.arveja8 {
+    position: absolute;
+    top: 84%;
+    left: 41%;
+    cursor: pointer;
+    width: 30px;
+    animation: tirar 1s ease-in-out forwards;
+
+}
+
+.hud {
+    position: absolute;
+    top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 10px;
+    font-family: 'Arial', sans-serif;
+}
+
+.hud-item {
+    display: flex;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5px 10px;
+    border-radius: 8px;
+}
+
+.hud-item img {
+    width: 20px;
+    height: 20px;
+}
+
+.tiro {
+    animation: tirar 1s ease-in-out forwards;
+}
+
+@keyframes tirar {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(400px);
+    }
+}
+
+@keyframes moverLateral {
+
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+
+    50% {
+        transform: translateX(10px);
+    }
+}
+
+.saltar {
+    animation: saltar 0.5s ease-in-out forwards;
+}
+
+@keyframes saltar {
+    0% {
+        transform: translateY(0);opacity: 1;
+
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 0;
+
+    }
+}
+
+.planta,
+.planta-1,
+.planta-2,
+.planta-3,
+.planta12,
+.Girasol,
+.girasol2,
+.girasol3 {
+    animation: moverLateral 3s ease-in-out infinite;
+}
