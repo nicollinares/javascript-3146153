@@ -190,3 +190,28 @@
   border: 3px solid #FFD700;
 }
 
+.play-stop-img3{
+  background-color: black;
+  color: aliceblue;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+#play-stop-img3:hover{
+  background-color: aliceblue;
+}
+#play-stop-img3{
+  background-color: aqua;
+  color: black;
+  border: none;
+  position: absolute;
+  top: 4%;
+  left: 33%;
+  cursor: pointer;
+  padding: 1rem;
+  border-radius: 3rem;
+  cursor: pointer;
+  font-size: 16px;
+}
