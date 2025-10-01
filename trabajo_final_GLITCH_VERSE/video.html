@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reproducción de Capítulo</title>
+  <link rel="stylesheet" href="./styles/estilo.css">
+</head>
+<body>
+  <div class="contenido" id="video-contenedor">
+    <h2>Cargando capítulo...</h2>
+  </div>
+
+   <!-- Script externo que contiene la información de los capítulos (JSON simulado en bs.js) -->
+  <script src="./bs.js"></script>
+
+  <script>
+    // 1. Obtener el id desde la URL
+    // window.location.search obtiene lo que viene después de "?" en la URL (ejemplo: ?id=2)
+    // URLSearchParams permite leer esos parámetros
+    const params = new URLSearchParams(window.location.search);
+    const idCapitulo = parseInt(params.get("id")); // Convierte el valor de "id" en número entero
+
+    // 2. Buscar el capítulo en el JSON (comic definido en bs.js)
+    // Busca dentro del arreglo de capítulos aquel cuyo id coincida con el de la URL
+    const cap = comic.capitulos.find(c => c.id === idCapitulo);
+
+    // 3. Mostrar el reproductor y la descripción
+    if (cap) {
+      // Si encuentra el capítulo, modifica el contenido del contenedor con la info del capítulo
+      document.getElementById("video-contenedor").innerHTML = `
+        <h2>Capítulo ${cap.id}: ${cap.nombreCap}</h2> <!-- Título del capítulo -->
+        
+        <!-- Reproductor de video -->
+        <video controls autoplay style="width:80%; max-width:1219px; margin-left:325px; background:lightblue;">
+          <source src="${cap.video}" type="video/mp4"> <!-- Video del capítulo -->
+          Tu navegador no soporta la reproducción de video. <!-- Texto alternativo -->
+        </video>
+
+        <!-- Descripción del capítulo -->
+        <p style="margin-top:66px; text-align:center; color:white; font-size:30px;">
+          ${cap.descripcion}
+        </p>
+
+        <!-- Botón para volver a la página de capítulos -->
+        <a href="capitulos.html" 
+           style="display:inline-block; margin-top:15px; background:black; color:white;
+                  padding:13px; text-decoration:none; border-radius:20px; 
+                  margin-left:841px; font-family:Georgia, 'Times New Roman', Times, serif;">
+          ⬅ Volver a capítulos
+        </a>
+      `;
+    } else {
+      // Si no encuentra el capítulo (id inválido), muestra mensaje de error
+      document.getElementById("video-contenedor").innerHTML = `<p>Capítulo no encontrado</p>`;
+    }
+  </script>
+</body>
+</html>

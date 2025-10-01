@@ -1,0 +1,308 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+body {
+  font-family: Arial, sans-serif;
+  background: #fdfdfd;
+  color: #222;
+}
+
+
+header {
+  background: #000;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px;
+}
+header nav ul {
+  padding-right: 150px; 
+}
+
+header .logo img {
+  height: 120px;
+  margin-left: 105px
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+header nav a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+}
+
+header nav a:hover {
+  color: #00aaff;
+}
+
+
+.intro {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+    background-image: url(../img_videos/fondo.pagina.principal.jpg);
+  padding: 288px;
+  height: 530px;
+    color: white;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.intro .texto {
+  width: 50%;
+}
+
+.intro .texto h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.intro .texto p {
+  font-size: 1.5rem;
+  line-height: 1.6;
+}
+
+.intro .imagen img {
+  max-width: 350px;
+  HEIGHT: 304PX;
+    WIDTH: 365px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    
+}
+
+.episodios {
+  padding: 40px;
+  text-align: 
+}
+
+.episodios h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  text-align: left; 
+  margin-left: 20px; 
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s;
+      height: 188px;
+    width: 311px;
+}
+
+.card img {
+  width: 83%;
+  display: block;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+.footer {
+  background: #111;
+  color: #fff;
+  text-align: center;
+  padding: 54px 20px;
+  font-family: Arial, sans-serif;
+}
+
+.footer h3 {
+  margin-bottom: 10px;
+  font-size: 22px;
+  color: #f39c12;
+}
+
+.footer p {
+  font-size: 14px;
+  margin-bottom: 20px;
+  color: #bbb;
+}
+
+.footer .socials {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.footer .socials li a {
+  text-decoration: none;
+  color: #f39c12;
+  transition: color 0.3s;
+}
+
+.footer .socials li a:hover {
+  color: #fff;
+}
+
+.footer-bottom {
+  margin-top: 20px;
+  border-top: 1px solid #333;
+  padding-top: 15px;
+  font-size: 13px;
+  color: #888;
+}
+
+
+@media (min-width: 768px) and (max-width: 1024px) {
+
+  header {
+    padding: 10px 20px; 
+  }
+
+  header nav ul {
+    gap: 15px;         
+    padding-right: 40px;
+  }
+
+  header .logo img {
+    height: 90px;
+  }
+
+  .intro {
+    flex-direction: column;  
+    text-align: center;
+    padding: 60px 20px;
+    height: auto;
+  }
+
+  .intro .texto {
+    width: 100%; 
+    margin-bottom: 20px;
+  }
+
+  .intro .imagen img {
+    max-width: 250px;
+    height: auto;
+  }
+
+  .episodios {
+    padding: 20px;
+  }
+
+  .episodios h2 {
+    font-size: 1.8rem;
+    margin-left: 0;  
+    text-align: center;
+  }
+
+  .grid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+  }
+
+  .card {
+    width: 100%;  
+    height: auto;
+  }
+
+  .card img {
+    width: 100%;
+  }
+}
+
+
+
+@media (max-width: 767px) {
+
+  header {
+    flex-direction: column;  
+    padding: 10px;
+    text-align: center;
+  }
+
+  header .logo img {
+    height: 70px; 
+    margin-bottom: 10px;
+    margin-left: 1px
+  }
+
+  header nav ul {
+    flex-direction: column; 
+    gap: 10px;
+    padding-right: 0;
+  }
+
+  .intro {
+    flex-direction: column;
+    text-align: center;
+    padding: 40px 20px;
+    height: auto;
+  }
+
+  .intro .texto {
+    width: 100%;
+  }
+
+  .intro .texto h1 {
+    font-size: 2rem;
+  }
+
+  .intro .texto p {
+    font-size: 1rem;
+  }
+
+  .intro .imagen img {
+    max-width: 200px;
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+  }
+
+  .episodios {
+    padding: 20px;
+  }
+
+  .episodios h2 {
+    font-size: 1.5rem;
+    text-align: center;
+    margin-left: 0;
+  }
+
+  .grid {
+    grid-template-columns: 1fr; 
+    gap: 15px;
+  }
+
+  .card {
+    width: 100%;
+    height: auto;
+  }
+
+  .card img {
+    width: 100%;
+  }
+
+  .footer {
+    padding: 20px 10px;
+  }
+
+  .footer h3 {
+    font-size: 18px;
+  }
+
+  .footer p {
+    font-size: 12px;
+  }
+}
